@@ -28,7 +28,7 @@
 
    ## Links
 
-   ### Link for [Video Displaying operation of the Application](n/a)
+   ### Link for [Video Displaying operation of the Application](https://drive.google.com/file/d/1REPFnGZyysO2xGXJm4NkiOlG9T-KVKmz/view)
    
    ### Link for [Repository For Deployed Application](https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator)
    
@@ -65,11 +65,13 @@
 
    ## Screenshots
 
-   yes, this is a placeholder for screenshots to be added
+   
 
    ## Tests
 
    To test if the code meets the parameters of the requirements of the project, in the intergrated Terminal input 'npm run test' . This should bring up a screenshot similar to the one below:
+
+
 
    ## Evolution
 
