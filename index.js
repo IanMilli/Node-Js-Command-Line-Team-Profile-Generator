@@ -1,6 +1,6 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const Manager = require("./assets/library/Manager");
+const Engineer = require("./assets/library/Engineer");
+const Intern = require("./assets/library/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -8,7 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./src/page-template");
+const render = require("./assets/src/page-template");
 const { POINT_CONVERSION_COMPRESSED } = require("constants");
 
 
