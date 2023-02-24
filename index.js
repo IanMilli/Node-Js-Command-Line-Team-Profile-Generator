@@ -12,12 +12,12 @@ const render = require("./assets/src/page-template");
 const { POINT_CONVERSION_COMPRESSED } = require("constants");
 
 
-// Team members array
+// create an array for the team that is empty ready for populating
 const team = [];
 
 
 // Questions arrays
-// Manager
+//Create the question array for the manager
 const managerQuestions = [
   {
     type: "input",
@@ -41,7 +41,7 @@ const managerQuestions = [
   }
 ];
 
-// Engineer
+//Create the question array for the engineer
 const engineerQuestions = [
   {
     type: "input",
@@ -65,7 +65,7 @@ const engineerQuestions = [
   }
 ];
 
-// Intern
+//Create the question array for the intern
 const internQuestions = [
   {
     type: "input",
@@ -89,17 +89,17 @@ const internQuestions = [
   }
 ];
 
-// Add team member?
+//create a question allowing you to add a new team member or stop there
 const teamAdd =
 {
   type: "list",
   message: "What type of team member would you like to add?",
   name: "team",
-  choices: ["Engineer", "Intern", "None"]
+  choices: ["Engineer", "Intern", "No more - Finish"]
 }
 
 
-// Create new team member
+// function to allow the creation of a new team member based on the user inputs
 function createTeamMember(questions, type) {
   let spec;
   inquirer.prompt(questions).then(response => {
@@ -119,7 +119,7 @@ function createTeamMember(questions, type) {
   })
 };
 
-// Create team: add Engineer, Intern, or none?
+// function to create the team and add extra engineers, interns or select no more
 function createTeam() {
   inquirer.prompt(teamAdd).then(response => {
     switch (response.team) {
@@ -130,7 +130,7 @@ function createTeam() {
         createTeamMember(internQuestions, Intern);
         break;
       default:
-        // if none, render team members array into file
+        // if no more is selected render the details entered into the team array
         const finalHTML = render(team)
         fs.writeFile("./output/team.html", finalHTML, function (err) {
           if (err) {
