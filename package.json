@@ -1,0 +1,23 @@
+{
+  "name": "node-js-command-line-team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator#readme"
+}
