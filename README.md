@@ -111,6 +111,7 @@
  
    Scott Nelson - officeHours.
    Dane Edwards - challenge 12 tutorial video
+   Laura Cole - Instructor
 
 
 
