@@ -30,6 +30,10 @@
 
    ### Link for [Video Displaying operation of the Application](https://drive.google.com/file/d/1REPFnGZyysO2xGXJm4NkiOlG9T-KVKmz/view)
    
+   * SCAN the following QR Link as an alternative way of seeing the above video:
+   ![qr-code](https://user-images.githubusercontent.com/120601739/221291323-f078b0c2-bc15-4e3a-ae80-0da4208f6ca9.png)
+
+   
    ### Link for [Repository For Deployed Application](https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator)
    
    ## Installation 
@@ -49,7 +53,8 @@
   The following is a template Image provided to give us some guidance with regards how the final product could look.
 
    * ### Template Image
-  
+  ![Template displaying how the project could look](https://user-images.githubusercontent.com/120601739/221290436-5bfeeead-9d63-41de-97a9-b90d4ced3ca1.png)
+
 
    ## UserStory
 
@@ -65,7 +70,8 @@
 
    ## Screenshots
 
-   
+   ![127 0 0 1_5500_output_team html](https://user-images.githubusercontent.com/120601739/221291114-6e57bb99-045c-4dde-8a18-3c22e174116e.png)
+
 
    ## Tests
 
@@ -94,11 +100,15 @@
    ## References
 
    MDN Documents:
-
+   * https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming
+   
    W3Schools:
-
+   * https://www.w3schools.com/cssref/css3_pr_flex.php
+   
    Bootstrap 4.3:
-
+   * https://getbootstrap.com/docs/4.3/utilities/flex/
+   * https://getbootstrap.com/docs/4.3/utilities/spacing/
+ 
    Scott Nelson - officeHours.
    Dane Edwards - challenge 12 tutorial video
 
