@@ -1,24 +1,19 @@
-const Manager = import("./lib/Manager");
-const Engineer = import("./lib/Engineer");
-const Intern = import("./lib/Intern");
-import inquirer from "inquirer";
-import path from "path";
-import fs from "fs/promises";
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const inquirer = require("inquirer");
+const path = require("path");
+const fs = require("fs");
 
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const team = [];
-
-startProgram()
-async function startProgram(){
-
-
-
-
-
+const render = require("./src/page-template");
+const { POINT_CONVERSION_COMPRESSED } = require("constants");
 
 
 // Team members array
-
+const team = [];
 
 
 // Questions arrays
@@ -28,15 +23,18 @@ const managerQuestions = [
     type: "input",
     message: "What is your name?",
     name: "name"
-  },{
+  },
+  {
     type: "input",
     message: "What is your ID?",
     name: "id"
-  },{
+  },
+  {
     type: "input",
     message: "What is your email?",
     name: "email"
-  },{
+  },
+  {
     type: "input",
     message: "What is your office number?",
     name: "office"
@@ -49,15 +47,18 @@ const engineerQuestions = [
     type: "input",
     message: "What is your engineer's name?",
     name: "name"
-  },{
+  },
+  {
     type: "input",
     message: "What is your engineer's ID?",
     name: "id"
-  },{
+  },
+  {
     type: "input",
     message: "What is your engineer's email?",
     name: "email"
-  },{
+  },
+  {
     type: "input",
     message: "What is your engineer's GitHub username?",
     name: "github"
@@ -70,15 +71,18 @@ const internQuestions = [
     type: "input",
     message: "What is your intern's name?",
     name: "name"
-  },{
+  },
+  {
     type: "input",
     message: "What is your intern's ID?",
     name: "id"
-  },{
+  },
+  {
     type: "input",
     message: "What is your intern's email?",
     name: "email"
-  },{
+  },
+  {
     type: "input",
     message: "What is your intern's school?",
     name: "school"
@@ -110,7 +114,7 @@ function createTeamMember(questions, type) {
         spec = response.office;
     }
     const newMember = new type(response.name, response.id, response.email, spec)
-    teamMembers.push(newMember)
+    team.push(newMember)
     createTeam()
   })
 };
@@ -127,7 +131,7 @@ function createTeam() {
         break;
       default:
         // if none, render team members array into file
-        const finalHTML = render(teamMembers)
+        const finalHTML = render(team)
         fs.writeFile("./output/team.html", finalHTML, function (err) {
           if (err) {
             return console.log(err);
@@ -140,4 +144,4 @@ function createTeam() {
 
 
 // Begin building team
-createTeamMember(managerQuestions, Manager);}
+createTeamMember(managerQuestions, Manager);
