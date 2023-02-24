@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator#readme"
+  "homepage": "https://github.com/IanMilli/Node-Js-Command-Line-Team-Profile-Generator#readme",
+  "dependencies": {
+    "jest": "^29.4.3"
+  }
 }
