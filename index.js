@@ -5,15 +5,11 @@ import inquirer from "inquirer";
 import path from "path";
 import fs from "fs/promises";
 
+
+const team = [];
+
 startProgram()
 async function startProgram(){
-
-team.push(newManager("", 1, ""))
-let htmlDoc = render(team)
-await fs.writeFile(outputPath,htmlDoc);
-
-
-}
 
 
 
@@ -22,7 +18,7 @@ await fs.writeFile(outputPath,htmlDoc);
 
 
 // Team members array
-const teamMembers = [];
+
 
 
 // Questions arrays
@@ -32,18 +28,15 @@ const managerQuestions = [
     type: "input",
     message: "What is your name?",
     name: "name"
-  },
-  {
+  },{
     type: "input",
     message: "What is your ID?",
     name: "id"
-  },
-  {
+  },{
     type: "input",
     message: "What is your email?",
     name: "email"
-  },
-  {
+  },{
     type: "input",
     message: "What is your office number?",
     name: "office"
@@ -56,18 +49,15 @@ const engineerQuestions = [
     type: "input",
     message: "What is your engineer's name?",
     name: "name"
-  },
-  {
+  },{
     type: "input",
     message: "What is your engineer's ID?",
     name: "id"
-  },
-  {
+  },{
     type: "input",
     message: "What is your engineer's email?",
     name: "email"
-  },
-  {
+  },{
     type: "input",
     message: "What is your engineer's GitHub username?",
     name: "github"
@@ -80,18 +70,15 @@ const internQuestions = [
     type: "input",
     message: "What is your intern's name?",
     name: "name"
-  },
-  {
+  },{
     type: "input",
     message: "What is your intern's ID?",
     name: "id"
-  },
-  {
+  },{
     type: "input",
     message: "What is your intern's email?",
     name: "email"
-  },
-  {
+  },{
     type: "input",
     message: "What is your intern's school?",
     name: "school"
@@ -153,4 +140,4 @@ function createTeam() {
 
 
 // Begin building team
-createTeamMember(managerQuestions, Manager);
+createTeamMember(managerQuestions, Manager);}
